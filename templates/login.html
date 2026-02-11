@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Details</title>
+    <!-- Optional: link to CSS -->
+    
+</head>
+<body>
+    <header>
+        <h1>Login Details</h1>
+    </header>
+
+    <form action = "login" method="post">
+    {% csrf_token %}
+
+    
+    <input type="text" name ="username" Placeholder="User Name"><br>
+    <input type="password" name ="password" Placeholder="Password"><br>
+    <input type="Submit" value="Submit">  
+</form> 
+<div>
+    {%for message in messages%}
+    <h3>{{message}}</h3>
+    {% endfor %}
+</div>
+
+
+    <footer>
+        <p></p>
+    </footer>
+
+   
+</body>
+</html>
